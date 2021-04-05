@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 3</title>
+    <style>
+        /* .uno{
+            background-color: coral;
+            width: 200px;
+            height: 20px;
+            display: none;
+        }
+        .dos{
+            background-color: darkgreen;
+            width: 200px;
+            height: 20px;
+            display: none;
+        } */
+        input{
+            padding: 10px 30px;
+            margin-top: 10px;
+        }
+        .input_correcto{
+            background-color: lightgreen;
+        }
+        .input_incorrecto{
+            background-color: red;
+        }
+        .p-nombre{
+            display: none;
+        }
+        .p-nombre-error,.p-correo-error{
+            display: block;
+            color: red;
+            font-size: 10px;
+        }
+        .p-correo{
+            display: none;
+        }
+       
+        .p-submit{
+            display: none;
+        }
+        .p-submit-enviado{
+            color: green;
+            display: block;
+        }
+        .p-submit-error{
+            color: red;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!--ejemplo5-->
+    <form action="enviar.php" id="form" method="post">
+        <input type="text" name="nombre" id="nombre" placeholder="Usuario">
+        <p class="p-nombre" id="p-nombre">El usuario tiene que ser de 4 a 10 digitos y solo puede contener letras</p>
+        <input type="text" name="correo" id="correo" placeholder="Correo">
+        <p class="p-correo" id="p-correo">El correo debe tener el formato nombre@correo.com</p>
+        <input type="submit" value="Enviar información">
+        <p class="p-submit" id="p-submit">
+            Correo enviado correctamente!
+        </p>
+    </form>
+    <!--ejemplo 3
+    <form action="procesar.php">
+        <input type="text" id="input1" placeholder="Escribe tu nombre"  >
+        <input type="submit" value="enviar">
+    </form>-->
+    <!--ejemplo 2
+    <button id="a">toca</button>
+    <div class="uno">tocaste uno</div>
+    <div class="dos">tocaste dos</div>-->
+    <!--ejemplo 1
+    <button id="a">toca aquí</button>-->
+    <script src="js/clase3.js"></script>
+</body>
+</html>

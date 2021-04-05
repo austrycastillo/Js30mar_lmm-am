@@ -60,17 +60,17 @@
 //eventos-> handler(acción que responde a los eventos)
 //       -> listener(oyente, pendiente de qué pase un evento)
 
-function activar() {
-    var barra = document.getElementById("caja2")
-    var width = 0;
-    setInterval(rellenar, 100)
-    function rellenar() {
-        if (width != 100) {
-            width++;
-            barra.style.width = width + "%"
-        }
-    }
-}
+// function activar() {
+//     var barra = document.getElementById("caja2")
+//     var width = 0;
+//     setInterval(rellenar, 100)
+//     function rellenar() {
+//         if (width != 100) {
+//             width++;
+//             barra.style.width = width + "%"
+//         }
+//     }
+// }
 
 // function mostrarMas() {
 //     var div = document.getElementById("mas")
@@ -119,18 +119,19 @@ capturing:true  -> tocar primero al tag menos específico
 //     }
 // })
 
-var es = document.getElementById("es")
-es.addEventListener("click", () => {
-    var din = document.createElement("button")
-    din.innerText = "dinámico"
-    din.id = "din"
-    document.body.appendChild(din)
-})
-document.addEventListener("click", (e) => {
-    console.log(e.target.id)
-    if (e.target.id == "din") {
-        console.log("Soy el botón dinámico")
-    }
-})
+// var es = document.getElementById("es")
+// es.addEventListener("click", () => {
+//     var din = document.createElement("button")
+//     din.innerText = "dinámico"
+//     din.id = "din"
+//     document.body.appendChild(din)
+// })
+// document.addEventListener("click", (e) => {
+//     console.log(e.target.id)
+//     if (e.target.id == "din") {
+//         console.log("Soy el botón dinámico")
+//     }
+// })
+
 
 
