@@ -75,14 +75,63 @@ var campos = {
     nombre: false,
     correo: false
 }
+var exp = {
+    nombre: /^[A-Z,a-z]{4,10}$/,
+    correo: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i
+}
 var form = document.getElementById("form")
 var inputs = document.querySelectorAll("input")
+var verificar = (e) => {
+    //console.log(e.target.name)
+    switch (e.target.name) {
+        case "nombre":
+            if (exp.nombre.test(e.target.value)) {
+                console.log("estoy en el if")
+                document.querySelector("#nombre").classList.add("input_correcto")
+                document.querySelector("#nombre").classList.remove("input_incorrecto")
+                document.querySelector("#p-nombre").classList.add("p-nombre")
+                document.querySelector("#p-nombre").classList.remove("p-nombre-error")
+                campos[nombre] = true
+            } else {
+                console.log("else")
+                document.querySelector("#nombre").classList.add("input_incorrecto")
+                document.querySelector("#nombre").classList.remove("input_correcto")
+                document.querySelector("#p-nombre").classList.remove("p-nombre")
+                document.querySelector("#p-nombre").classList.add("p-nombre-error")
+                campos[nombre] = false
+            }
+            break;
+            case "correo":
+            if (exp.correo.test(e.target.value)) {
+                console.log("estoy en el if")
+                document.querySelector("#correo").classList.add("input_correcto")
+                document.querySelector("#correo").classList.remove("input_incorrecto")
+                document.querySelector("#p-correo").classList.add("p-correo")
+                document.querySelector("#p-correo").classList.remove("p-correo-error")
+                campos[correo] = true
+            } else {
+                console.log("else")
+                document.querySelector("#correo").classList.add("input_incorrecto")
+                document.querySelector("#correo").classList.remove("input_correcto")
+                document.querySelector("#p-correo").classList.remove("p-correo")
+                document.querySelector("#p-correo").classList.add("p-correo-error")
+                campos[correo] = false
+            }
+            break;
+    }
+
+}
+inputs.forEach((item) => {
+    item.addEventListener("keyup", verificar)
+    item.addEventListener("blur", verificar)
+})
 form.addEventListener("submit", (e) => {
     e.preventDefault()
     if (campos[nombre] && campos[correo]) {
         console.log("enviado")
         document.querySelector("#p-submit").classList.add("p-submit-enviado")
-    }else{
+        //console.log(e.target.submit())
+    } else {
         console.log("no enviado")
         document.querySelector("#p-submit").innerHTML = "No enviado"
         document.querySelector("#p-submit").classList.add("p-submit-error")
