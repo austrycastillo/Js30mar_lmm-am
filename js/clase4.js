@@ -61,6 +61,7 @@ let btn = document.querySelector("button")
 btn.addEventListener("click", () => {
     let xhr = new XMLHttpRequest()
     xhr.open("get", "plantilla.html")
+    
     xhr.addEventListener("load", () => {
         if (xhr.status == 200) {
             let plantilla = xhr.response

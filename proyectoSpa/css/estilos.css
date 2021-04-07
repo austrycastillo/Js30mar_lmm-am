@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Satisfy', cursive;
+}
+#izq{
+    width: 48%;
+    height: 350px;
+    background-color: salmon;
+    float: left;
+    box-shadow: 1px 5px 10px rgb(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#der{
+    width: 48%;
+    height: 350px;
+    background-color: salmon;
+    float: left;
+    margin-left: 4%;
+    box-shadow: 1px 5px 10px rgb(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
