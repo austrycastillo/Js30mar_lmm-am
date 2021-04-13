@@ -86,5 +86,5 @@ function manejarEvento(e){
     setTimeout(()=>{
         console.log(e)
         log.textContent = log.textContent + `${e.type}: ${e.loaded} transferidos\n`
-    },2000)
+    },4000)
 }
